@@ -53,5 +53,6 @@ def show_disclaimer():
 
 def reset_chat():
     """Reset the chat session."""
-    st.session_state.messages = []
-    st.experimental_rerun()
+    if 'messages' in st.session_state:
+        del st.session_state.messages
+    st.rerun()

@@ -51,8 +51,7 @@ def main():
         
         # Botón de reiniciar chat
         if st.button("🔄 Reiniciar Chat"):
-            st.session_state.messages = []
-            st.experimental_rerun()
+            reset_chat()
         
         language = st.selectbox("Selecciona el idioma", ["Español (es)", "English (en)", "Français (fr)"])
         language_code = language.split("(")[1].strip(")")
